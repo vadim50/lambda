@@ -57,12 +57,288 @@
 
 /*=============================================
 ===============================================*/
-body
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?53129919');
+  src: url('../font/fontello.eot?53129919#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?53129919') format('woff'),
+       url('../font/fontello.ttf?53129919') format('truetype'),
+       url('../font/fontello.svg?53129919#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?53129919#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-youtube:before { content: '\e801'; } /* '' */
+.icon-facebook:before { content: '\e802'; } /* '' */
+.icon-calendar:before { content: '\e803'; } /* '' */
+.icon-down-open:before { content: '\e804'; } /* '' */
+.icon-cc-paypal:before { content: '\e805'; } /* '' */
+.icon-cc-visa:before { content: '\e806'; } /* '' */
+.icon-cc-mastercard:before { content: '\e807'; } /* '' */
+.icon-vkontakte:before { content: '\e808'; } /* '' */
+.icon-cc-amex:before { content: '\e809'; } /* '' */
+/*====================================================
+====================================================*/
+.font1
 {
-	color: red;
+	font-family: "Gentium Book Basic","Arial", serif;
+}
+.font2
+{
+	font-family: "Yeseva One", cursive;
+}
+.font3
+{
+	font-family: "Lato", sans-serif;
+}
+.font4
+{
+	font-family: "Open Sans", sans-serif;
+}
+.padding
+{
+	padding: 0;
+}
+.wrapper
+{
+	width: 80%;
+	margin: 0 auto;
+}
+.promo
+{
+	background-color:#252d25;
+	background-image: url("../img/bg-1.jpg");
+	background-size: cover;
+	padding-bottom: 140px;
 
-	h1
+	.header
 	{
-		font-size: 60px;
+		box-shadow: 0 70px 148px -43px #000 inset;
+		min-height: 110px;
+	}
+	.logo-header
+	{
+		padding-top: 10px;
+	}
+	.navigation-header li
+	{
+		display: inline-block;
+	}
+	.navigation-header a
+	{
+		display: inline-block;
+		.font1;
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 25px;
+		padding-top: 50px;
+		padding-right: 50px;
+		color: #fff;
+		text-decoration: none;
+	}
+	 .navigation-header .last-pidor
+	{
+		padding-right: 0;
+	}
+	.navigation-header 
+	{
+		margin: 0;
+		padding: 0;
+	}
+	.social-header i
+	{
+		display: inline-block;
+		font-size: 20px;
+		padding-top: 50px;
+		margin-right: 18px;
+		color:#dab33e;
+	}
+	.social-header a
+	{
+		text-decoration: none;
+	}
+	.promo-divider
+	{
+		display: inline-block;
+	}
+	.promo-title1,
+	.promo-title2
+	{
+		.font2;
+		font-size: 90px;
+		line-height: 90px;
+		color:#fff;
+		margin: 0;	
+	}
+	.promo-divider
+	{
+		padding-bottom: 35px;
+	}
+	.promo-title1
+	{
+		padding-top: 185px;
+	}
+	.promo-title2
+	{
+		padding-bottom: 50px;
+	}
+	.btn-table a,
+	.btn-menu a
+	{	
+		.font3;
+		font-size: 18px;
+		line-height: 20px;
+		padding: 20px;
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+	}
+	.btn-table a
+	{
+		border: 1px solid #000;
+	}
+	.btn-menu a
+	{
+		border: 1px solid #fff;
+	}
+	.btn-menu
+	{
+		box-shadow: 0 0px 91px -9px #fff inset;
+		display: inline-block;
+	}
+	.btn-table
+	{
+		box-shadow: 0 62px 57px -17px #000 inset;
+		display: inline-block;
 	}
 }
+.about
+{
+	padding: 100px 0;
+	background-color: #fff;
+	background-image: url("../img/about-bg.jpg");
+	box-shadow: -151px 11px 222px 59px rgba(231, 231, 231, 0.63) inset;
+
+	.about-title
+	{
+		.font2;
+		font-size: 36px;
+		line-height: 24px;
+		color: #cc9900;
+		margin: 0;
+
+	}
+	.about-divider
+	{
+		display: inline-block;
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+	.about-img-cook
+	{
+		display: inline-block;
+		padding-top: 50px;
+	}
+	.about-text
+	{
+		.font3;
+		font-size: 16px;
+		line-height: 24px;
+		color: #4c4c4c;
+		width: 430px;
+		margin: 0;
+		display: inline-block;
+	}
+}
+.indegredients
+{
+	background-color: #252d25;
+	background-image: url("../img/indegredients-bg.jpg");
+	background-size: cover;
+	min-height: 760px;
+	padding: 100px 0;
+
+	.indegredients-title
+	{
+		.font2;
+		margin: 0;
+		font-size: 36px;
+		line-height: 40px;
+		color:#fff;
+	}
+	.indegredients-bg
+	{
+		background-color: #000;
+		opacity: .7;
+		padding: 80px 0;
+		width: 540px;
+	}
+	.indegredients-divider
+	{
+		display: inline-block;
+		padding-top: 15px;
+		padding-bottom: 30px;
+	}
+	.indegredients-text
+	{
+		.font3;
+		margin: 0;
+		font-size: 16px;
+		line-height: 24px;
+		color: #fff;
+		width: 420px;
+		padding-bottom: 70px;
+		display: inline-block;
+	}
+	.indegredients-img
+	{
+		display: inline-block;
+	} 
+}
+
